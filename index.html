@@ -7,7 +7,7 @@
     <title>CV_TranTuanThinh</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="resume.css" />
 </head>
 
 <body>
@@ -47,19 +47,25 @@
                     skills: "Kỹ năng chuyên môn",
                     exp: "Kinh nghiệm dự án",
                     edu: "Học vấn | Trường Đại học Quốc tế Miền Đông (EIU) 2020–2025",
-                    softSkills: "Kỹ năng mềm:"
+                    softSkills: "Kỹ năng mềm:",
                 },
                 en: {
                     summary: "Professional Summary",
                     skills: "Technical Skills",
                     exp: "Project Experience",
                     edu: "Education | Eastern International University (EIU) 2020–2025",
-                    softSkills: "Soft Skills:"
+                    softSkills: "Soft Skills:",
                 },
             },
             edu: {
-                vi: "Cử nhân Kỹ thuật Phần mềm | GPA: 3.06/4.0 | IELTS: 6.0",
-                en: "Bachelor of Software Engineering | GPA: 3.06/4.0 | IELTS: 6.0",
+                vi: [
+                    "Cử nhân Kỹ thuật Phần mềm | GPA: 3.06/4.0 | IELTS: 6.0",
+                    "Claude Code In Action | Anthropic Education",
+                ],
+                en: [
+                    "Bachelor of Software Engineering | GPA: 3.06/4.0 | IELTS: 6.0",
+                    "Claude Code In Action | Anthropic Education",
+                ],
             },
         };
 
@@ -78,15 +84,23 @@
                 skills: [
                     {
                         l: { vi: "Frontend:", en: "Frontend:" },
-                        i: ["Next.js", "Angular", "TypeScript", "Redux Toolkit / NgRx", "NextUI / Material UI", "Tailwind CSS", "Axios", "React Hook Form"],
+                        i: [
+                            "Next.js",
+                            "Angular",
+                            "Redux Toolkit / NgRx",
+                            "NextUI / Material UI",
+                            "Tailwind CSS",
+                            "Axios",
+                            "React Hook Form",
+                        ],
                     },
                     {
-                        l: { vi: "Backend & Database:", en: "Backend & Database:" },
-                        i: ["ASP.NET Core", "Entity Framework Core", "PostgreSQL / MySQL", "Quartz.NET", "SignalR", "RESTful API Design"],
+                        l: { vi: "Backend:", en: "Backend:" },
+                        i: ["ASP.NET Core", "Entity Framework Core", "SQL", "Quartz.NET", "SignalR"],
                     },
                     {
                         l: { vi: "DevOps & Tools:", en: "DevOps & Tools:" },
-                        i: ["Docker", "Nginx", "Linux (VPS)", "Postman / Swagger", "Git", "WinSCP", "DBeaver", "SSL/TLS"],
+                        i: ["Docker", "Nginx", "Linux (VPS)", "Postman / Swagger", "Git", "WinSCP", "DBeaver"],
                     },
                 ],
             },
@@ -100,11 +114,7 @@
                 skills: [
                     {
                         l: { vi: "Core Stack:", en: "Core Stack:" },
-                        i: ["ASP.NET Core", "EF Core", "PostgreSQL", "MySQL", "SignalR", "Quartz.NET", "SMTP/Email Service"],
-                    },
-                    {
-                        l: { vi: "Architecture & Security:", en: "Architecture & Security:" },
-                        i: ["RESTful API", "JWT Authentication", "RBAC / ACL", "Database Indexing", "Transactions", "PDF Rendering", "QR Generation"],
+                        i: ["ASP.NET Core", "Entity Framework Core", "SQL", "Quartz.NET", "SignalR"],
                     },
                     {
                         l: { vi: "DevOps & Tools:", en: "DevOps & Tools:" },
@@ -121,16 +131,20 @@
                 },
                 skills: [
                     {
-                        l: { vi: "Frameworks & Libraries:", en: "Frameworks & Libraries:" },
-                        i: ["Next.js", "Angular", "TypeScript", "Redux Toolkit", "NgRx", "Axios", "NextUI", "Material UI"],
+                        l: { vi: "Core Stack:", en: "Core Stack:" },
+                        i: [
+                            "Next.js",
+                            "Angular",
+                            "Redux Toolkit / NgRx",
+                            "NextUI / Material UI",
+                            "Tailwind CSS",
+                            "Axios",
+                            "React Hook Form",
+                        ],
                     },
                     {
-                        l: { vi: "Capabilities:", en: "Capabilities:" },
-                        i: ["Responsive UI/UX", "Complex Form Handling", "State Management", "Rich Text Editor (Jodit)", "File Processing", "CSV Import/Export", "Calendar UI"],
-                    },
-                    {
-                        l: { vi: "Tools & Workflow:", en: "Tools & Workflow:" },
-                        i: ["Git", "Postman", "Chrome DevTools", "Docker (Basics)", "Nginx (Deployment)"],
+                        l: { vi: "DevOps & Tools:", en: "DevOps & Tools:" },
+                        i: ["Docker", "Nginx", "Linux (VPS)", "Postman", "Swagger", "Git", "WinSCP", "DBeaver"],
                     },
                 ],
             },
@@ -540,7 +554,7 @@
 
                     <section>
                         <div class="section-title">${ data.labels[currentLang].edu }</div>
-                        <p><b>${ data.edu[currentLang] }</b></p>
+                        ${ data.edu[currentLang].map((s) => `<p><b>${ s }</b></p>`).join("") }
                     </section>
                 </div>
             `;
