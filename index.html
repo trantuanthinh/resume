@@ -12,17 +12,29 @@
 
 <body>
     <div class="controls">
-        <div class="lang-switch">
-            <button class="btn btn-lang active" id="btn-en" onclick="setLang('en')">EN</button>
-            <button class="btn btn-lang" id="btn-vi" onclick="setLang('vi')">VI</button>
+        <p class="controls-title">Trần Tuấn Thịnh | Resume</p>
+
+        <div class="controls-actions">
+            <div class="lang-switch">
+                <button class="btn btn-lang active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="btn btn-lang" id="btn-vi" onclick="setLang('vi')">VI</button>
+            </div>
+
+            <button class="btn active role-btn" data-role="fullstack" onclick="setRole('fullstack')">
+                Fullstack Version
+            </button>
+
+            <button class="btn role-btn" data-role="be" onclick="setRole('be')">
+                Backend Version
+            </button>
+
+            <button class="btn role-btn" data-role="fe" onclick="setRole('fe')">
+                Frontend Version
+            </button>
+
+            <button class="btn btn-print" onclick="exportPDF()">Export PDF</button>
+            <button class="btn btn-print" onclick="exportAllPDFs()">Export All</button>
         </div>
-        <button class="btn active role-btn" data-role="fullstack" onclick="setRole('fullstack')">
-            Fullstack Version
-        </button>
-        <button class="btn role-btn" data-role="be" onclick="setRole('be')">Backend Version</button>
-        <button class="btn role-btn" data-role="fe" onclick="setRole('fe')">Frontend Version</button>
-        <button class="btn btn-print" onclick="exportPDF()">Export PDF</button>
-        <button class="btn btn-print" onclick="exportAllPDFs()">Export All</button>
     </div>
 
     <div id="cv-container"></div>
