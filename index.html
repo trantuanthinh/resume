@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trần Tuấn Thịnh | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.min.css" />
+</head>
+
+<body>
+    <div class="controls">
+        <p class="controls-title">Trần Tuấn Thịnh | Resume</p>
+
+        <div class="controls-actions">
+            <div class="lang-switch">
+                <button class="btn btn-lang active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="btn btn-lang" id="btn-vi" onclick="setLang('vi')">VI</button>
+            </div>
+
+            <button class="btn active role-btn" data-role="fullstack" onclick="setRole('fullstack')">
+                Fullstack Version
+            </button>
+
+            <button class="btn role-btn" data-role="be" onclick="setRole('be')">Backend Version</button>
+
+            <button class="btn role-btn" data-role="fe" onclick="setRole('fe')">Frontend Version</button>
+
+            <button class="btn btn-print" onclick="exportPDF()">Tải PDF</button>
+            <button class="btn btn-print" onclick="exportAllPDFs()">Tải PDF Tất Cả</button>
+        </div>
+    </div>
+
+    <div id="cv-container"></div>
+
+    <script src="data.min.js"></script>
+    <script src="main.min.js"></script>
+</body>
+
+</html>
