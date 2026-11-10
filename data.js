@@ -8,7 +8,7 @@ const data = {
             en: "TRAN TUAN THINH",
         },
         contact: [
-            ["Mail: tran.tuan.thinh.0125@gmail.com", "Phone: +84395 279 915", "Location: Ho Chi Minh, Vietnam"],
+            ["Email: tran.tuan.thinh.0125@gmail.com", "Phone: +84 395 279 915", "Location: Ho Chi Minh, Vietnam"],
             [
                 "Portfolio: trantuanthinh.github.io/portfolio",
                 "Github: github.com/trantuanthinh",
